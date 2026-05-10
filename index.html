@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>税理士法人BLT 新大阪事務所</title>
+  <meta name="description" content="税理士法人BLT 新大阪事務所。法人・個人事業・相続・贈与など、税務に関するご相談を承っております。御堂筋線 西中島南方駅・阪急京都線 南方駅より徒歩5分。" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+      color: #2d2621;
+      background: #f7f4ef;
+      line-height: 1.9;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      background: #2b2521;
+      color: white;
+      text-align: center;
+      padding: 28px 20px 110px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      margin-bottom: 70px;
+      font-size: 14px;
+      color: rgba(255,255,255,.82);
+      flex-wrap: wrap;
+    }
+    nav a:hover { color: #d9c7ad; }
+    .logo {
+      width: 260px;
+      height: auto;
+      margin: 0 auto 28px;
+      display: block;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: normal;
+      letter-spacing: .08em;
+      margin-bottom: 28px;
+      line-height: 1.45;
+    }
+    .line {
+      width: 82px;
+      height: 1px;
+      background: #d9c7ad;
+      margin: 0 auto 30px;
+    }
+    .hero-text {
+      font-size: clamp(19px, 3vw, 28px);
+      color: rgba(255,255,255,.86);
+      line-height: 1.9;
+    }
+    .hero-sub {
+      margin-top: 28px;
+      color: rgba(255,255,255,.64);
+      font-size: 15px;
+    }
+    section {
+      max-width: 1120px;
+      margin: auto;
+      padding: 78px 22px;
+    }
+    .label {
+      color: #8a7762;
+      letter-spacing: .24em;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: normal;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+    .lead {
+      font-size: 16px;
+      color: #4a4039;
+      max-width: 840px;
+    }
+    .bg {
+      background: #eee7dc;
+      max-width: none;
+    }
+    .inner {
+      max-width: 1120px;
+      margin: auto;
+      padding: 78px 22px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      padding: 32px 26px;
+      border: 1px solid #e2d7c8;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(43,37,33,.05);
+    }
+    .card h3 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 12px;
+      color: #2b2521;
+    }
+    .card p {
+      font-size: 14px;
+      color: #5b5047;
+    }
+    .office {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .office img {
+      width: 100%;
+      border-radius: 24px;
+      border: 1px solid #e2d7c8;
+      box-shadow: 0 8px 24px rgba(43,37,33,.08);
+    }
+    .message {
+      background: white;
+      padding: 42px;
+      border: 1px solid #e2d7c8;
+      border-radius: 26px;
+      box-shadow: 0 6px 18px rgba(43,37,33,.05);
+    }
+    .message p { margin-bottom: 18px; color: #4a4039; }
+    .sign {
+      text-align: right;
+      margin-top: 30px;
+      color: #2b2521;
+      font-size: 18px;
+    }
+    .qa {
+      background: white;
+      padding: 26px;
+      border-radius: 20px;
+      border: 1px solid #e2d7c8;
+      margin-bottom: 18px;
+    }
+    .qa h3 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 10px;
+      color: #2b2521;
+    }
+    form {
+      background: white;
+      border: 1px solid #e2d7c8;
+      border-radius: 26px;
+      padding: 34px;
+      max-width: 760px;
+      margin: 30px auto 0;
+      box-shadow: 0 6px 18px rgba(43,37,33,.05);
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #4a4039;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      margin-bottom: 18px;
+      border: 1px solid #d8cab8;
+      border-radius: 12px;
+      background: #fbfaf7;
+      font-size: 16px;
+      font-family: inherit;
+    }
+    button {
+      width: 100%;
+      border: none;
+      background: #2b2521;
+      color: white;
+      padding: 15px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .note {
+      font-size: 12px;
+      color: #7b6d60;
+      margin-top: 14px;
+    }
+    footer {
+      background: #2b2521;
+      color: white;
+      padding: 58px 22px;
+    }
+    .footer-inner {
+      max-width: 1120px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 36px;
+    }
+    footer h3 {
+      font-weight: normal;
+      font-size: 19px;
+      margin-bottom: 14px;
+      color: #d9c7ad;
+    }
+    footer p {
+      color: rgba(255,255,255,.76);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    footer a {
+      color: #d9c7ad;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    @media(max-width:768px){
+      header { padding: 24px 18px 82px; }
+      nav { gap: 14px; margin-bottom: 54px; font-size: 13px; }
+      .logo { width: 260px; margin-bottom: 24px; }
+      section, .inner { padding: 58px 18px; }
+      .office { grid-template-columns: 1fr; }
+      .message { padding: 28px 22px; }
+      form { padding: 26px 20px; }
+      footer { padding: 48px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header id="top">
+  <nav>
+    <a href="#top">ホーム</a>
+    <a href="#services">業務内容</a>
+    <a href="#about">事務所案内</a>
+    <a href="#qa">Q&A</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+
+  <img src="eeec1ac4e24f43cbb43b6eae161d1777_BLT_header_logo.png" class="logo" alt="税理士法人BLT ロゴ">
+
+  <h1>税理士法人 BLT 新大阪事務所</h1>
+  <div class="line"></div>
+  <p class="hero-text">法人・相続・贈与など<br>税務に関するご相談を承っております。</p>
+  <p class="hero-sub">長年の経験をもとに、一つひとつ丁寧に対応いたします。</p>
+</header>
+
+<section id="concept">
+  <p class="label">CONCEPT</p>
+  <h2>相談しやすい、身近な税理士事務所です。</h2>
+  <p class="lead">
+    税理士法人BLT 新大阪事務所では、単なる申告業務だけではなく、
+    日々のご相談も含めて、長く安心してお付き合いできる関係を大切にしております。
+    仕訳数や会社規模だけで機械的に判断するのではなく、
+    ご相談内容や状況を伺いながら、税理士の判断により対応可否を確認いたします。
+  </p>
+</section>
+
+<section class="bg" id="services">
+  <div class="inner">
+    <p class="label">SERVICES</p>
+    <h2>対応業務</h2>
+    <div class="grid">
+      <div class="card"><h3>法人顧問</h3><p>法人の税務相談・申告業務に対応しております。</p></div>
+      <div class="card"><h3>個人事業の税務相談</h3><p>個人事業主の確定申告や日々のご相談にも対応しております。</p></div>
+      <div class="card"><h3>確定申告</h3><p>状況に応じて必要な申告手続きを確認いたします。</p></div>
+      <div class="card"><h3>入力代行・記帳サポート</h3><p>会計入力や記帳に関するサポートもご相談いただけます。</p></div>
+      <div class="card"><h3>相続税のご相談</h3><p>相続に関する不安や手続きについて、丁寧に確認いたします。</p></div>
+      <div class="card"><h3>贈与税のご相談</h3><p>生前贈与など、贈与に関するご相談にも対応しております。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="office">
+  <div>
+    <p class="label">OFFICE</p>
+    <h2>落ち着いてご相談いただける空間</h2>
+    <p class="lead">
+      ご相談は、落ち着いた環境で丁寧にお話を伺います。
+      紹介でお越しいただく方にも安心していただけるよう、
+      相談しやすい雰囲気を大切にしています。
+    </p>
+  </div>
+  <img src="office.jpg" alt="応接室">
+</section>
+
+<section class="bg">
+  <div class="inner">
+    <div class="message">
+      <p class="label">MESSAGE</p>
+      <h2>代表挨拶</h2>
+      <p>税理士法人BLT 新大阪事務所では、法人・個人事業の税務相談をはじめ、相続・贈与に関するご相談まで、長年の経験をもとに対応しております。</p>
+      <p>税務は数字だけではなく、それぞれの状況や背景によって必要な対応が変わるものだと考えております。</p>
+      <p>当事務所では、単に手続きを進めるだけではなく、安心してご相談いただける関係を大切にしながら、一つひとつ丁寧に対応しております。</p>
+      <p>ご紹介でお越しいただく方にも、落ち着いてご相談いただける事務所でありたいと考えております。</p>
+      <p>今後も、地域の皆さまに安心してご相談いただける税理士事務所として、誠実に取り組んでまいります。</p>
+      <div class="sign">代表社員税理士<br>松尾 隆庸</div>
+    </div>
+  </div>
+</section>
+
+<section id="qa">
+  <p class="label">Q&A</p>
+  <h2>よくあるご質問</h2>
+
+  <div class="qa">
+    <h3>Q. 税務相談だけでも可能ですか？</h3>
+    <p>はい、可能です。申告業務だけではなく、日々の税務相談にも対応しております。</p>
+  </div>
+  <div class="qa">
+    <h3>Q. 相続税の相談はいつ頃から必要ですか？</h3>
+    <p>早めに状況を整理しておくことで、手続きや準備を進めやすくなる場合があります。生前のご相談にも対応しております。</p>
+  </div>
+  <div class="qa">
+    <h3>Q. 法人化の相談はできますか？</h3>
+    <p>はい、可能です。事業内容や売上状況に応じて、一般的なメリット・デメリットも含めてご説明いたします。</p>
+  </div>
+  <div class="qa">
+    <h3>Q. 個人事業主でも相談できますか？</h3>
+    <p>はい。確定申告や入力代行・記帳サポートなど、状況に応じて対応しております。</p>
+  </div>
+</section>
+
+<section class="bg" id="contact">
+  <div class="inner">
+    <p class="label">CONTACT</p>
+    <h2>お問い合わせ</h2>
+    <p class="lead">
+      まずはフォームよりご相談内容をお知らせください。
+      内容を確認後、必要に応じてご連絡いたします。
+    </p>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label>お名前</label>
+      <input type="text" name="name" required>
+
+      <label>メールアドレス</label>
+      <input type="email" name="email" required>
+
+      <label>電話番号（任意）</label>
+      <input type="text" name="phone">
+
+      <label>ご相談内容</label>
+      <textarea name="message" rows="6" required></textarea>
+
+      <button type="submit">送信する</button>
+      <p class="note">※フォームは現在仮設定です。正式公開時に送信先設定を行います。</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h3>税理士法人 BLT 新大阪事務所</h3>
+      <p>代表社員税理士　松尾 隆庸</p>
+      <p>〒532-0011</p>
+      <p>大阪市淀川区西中島5丁目8-26 竹内ビル5F-51</p>
+      <p>TEL：06-6195-4106</p>
+      <p>FAX：06-6195-4107</p>
+    </div>
+    <div>
+      <h3>アクセス</h3>
+      <p>御堂筋線「西中島南方」駅 徒歩5分</p>
+      <p>阪急京都線「南方」駅 徒歩5分</p>
+      <p>
+        <a href="https://maps.app.goo.gl/1EDFA95S1DWhKorU9?g_st=ac" target="_blank" rel="noopener noreferrer">
+          Google Mapはこちら
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
