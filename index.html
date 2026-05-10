@@ -1,33 +1,314 @@
-<section class="info-section">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>税理士法人 BLT 新大阪事務所</title>
 
-  <div class="info-box">
-    <h3>税理士法人 BLT 新大阪事務所</h3>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <p>代表社員税理士　松尾 隆庸</p>
+    body {
+      font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      color: #333;
+      background: #f7f4ef;
+      line-height: 1.8;
+    }
 
-    <p>
-      〒532-0011<br>
-      大阪市淀川区西中島5丁目8-26<br>
-      竹内ビル5F-51
-    </p>
-  </div>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  <div class="info-box">
-    <h3>アクセス</h3>
+    header {
+      background: #fff;
+      padding: 24px 20px;
+      border-bottom: 1px solid #e5ded4;
+      text-align: center;
+    }
 
-    <p>
-      御堂筋線「西中島南方」駅 徒歩5分<br>
-      阪急京都線「南方」駅 徒歩5分
-    </p>
-  </div>
+    .logo {
+      width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto 16px;
+    }
 
-  <div class="info-box">
-    <h3>お問い合わせ</h3>
+    header h1 {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
 
-    <p>
-      TEL：06-6195-4106<br>
-      FAX：06-6195-4107
-    </p>
-  </div>
+    .hero {
+      padding: 90px 20px;
+      text-align: center;
+      background: #efe7dc;
+    }
 
-</section>
+    .hero h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: 0.08em;
+    }
+
+    .hero p {
+      font-size: 16px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 48px;
+      letter-spacing: 0.08em;
+    }
+
+    .message {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .message p {
+      margin-bottom: 20px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 32px 24px;
+      border: 1px solid #e5ded4;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .info-section {
+      background: #fff;
+    }
+
+    .info-box {
+      max-width: 760px;
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+
+    .info-box:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-box h3 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      letter-spacing: 0.06em;
+    }
+
+    .info-box p {
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .contact-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 32px;
+      border: 1px solid #8b7355;
+      color: #8b7355;
+      background: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 13px;
+      color: #777;
+      background: #eee7dd;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 16px;
+      }
+
+      .logo {
+        width: 120px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      .hero {
+        padding: 70px 20px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      section {
+        padding: 64px 20px;
+      }
+
+      h2.section-title {
+        font-size: 22px;
+        margin-bottom: 36px;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        padding: 28px 22px;
+      }
+
+      .info-box {
+        margin-bottom: 48px;
+      }
+
+      .info-box h3 {
+        font-size: 20px;
+      }
+
+      .info-box p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="BLTロゴ" class="logo">
+    <h1>税理士法人 BLT 新大阪事務所</h1>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <h2>相談しやすい税理士事務所として</h2>
+        <p>
+          税務・会計に関するお悩みを、状況に合わせて丁寧にお伺いします。<br>
+          法人のお客様から個人のお客様まで、安心してご相談いただける事務所を目指しています。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">代表挨拶</h2>
+
+        <div class="message">
+          <p>
+            税理士法人 BLT 新大阪事務所では、法人税務、会計業務、相続・贈与など、幅広いご相談に対応しております。
+          </p>
+          <p>
+            数字の処理だけでなく、お客様のお話を丁寧に伺い、それぞれの状況に合ったかたちでサポートすることを大切にしています。
+          </p>
+          <p>
+            税務や会計についてお困りのことがございましたら、どうぞお気軽にご相談ください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">業務内容</h2>
+
+        <div class="service-list">
+          <div class="service-card">
+            <h3>法人税務</h3>
+            <p>
+              法人決算、申告、税務相談など、会社経営に必要な税務業務をサポートいたします。
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>相続・贈与</h3>
+            <p>
+              相続税、贈与税に関するご相談や、将来を見据えた対策について対応いたします。
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3>記帳・入力代行</h3>
+            <p>
+              日々の記帳や入力業務など、会計処理に関する事務負担の軽減をお手伝いいたします。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="container">
+
+        <h2 class="section-title">事務所情報</h2>
+
+        <div class="info-box">
+          <h3>税理士法人 BLT 新大阪事務所</h3>
+          <p>代表社員税理士　松尾 隆庸</p>
+          <p>
+            〒532-0011<br>
+            大阪市淀川区西中島5丁目8-26<br>
+            竹内ビル5F-51
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>アクセス</h3>
+          <p>
+            御堂筋線「西中島南方」駅 徒歩5分<br>
+            阪急京都線「南方」駅 徒歩5分
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>お問い合わせ</h3>
+          <p>
+            TEL：06-6195-4106<br>
+            FAX：06-6195-4107
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 税理士法人 BLT 新大阪事務所
+  </footer>
+
+</body>
+</html>
